@@ -1,0 +1,23 @@
+{% extends "layouts/main-layout.njk" %}
+
+{% block one %}
+<h4>This is the contents of block one before the include</h4>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+<h4>This is the contents of block one after the include</h4>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+{% endblock %}
+
+{% block two %}
+<h4>This is the contents of block two before the include</h4>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+{% include "includes/an-include.njk" %}
+
+<h4>This is the contents of block two after the include</h4>
+{{ "testing" | thisFilterDoesNotExist }}
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+{% endblock %}
